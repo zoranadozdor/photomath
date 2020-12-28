@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Camera App</title>
+  </head>
+
+  <body>
+      <div id="camera">
+	     <img src="{{ url_for('static', filename=path) }}" alt="capture">
+      </div>
+      <div id="btns-div">
+        <a href="{{ url_for('root') }}">
+           <button id="back" type="button">Go back</button>
+        </a>
+        <a>
+          <form method="post">
+            <button id="calculate" type="submit">Calculate</button>
+       <br>
+      {% for r in results %}
+        <h4>{{ r }}</h4>
+      {% endfor %}
+        </form>
+        </a>
+      </div>
+  </body>
+</html>
