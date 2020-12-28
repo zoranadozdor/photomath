@@ -1,0 +1,7 @@
+version: '3'
+services:
+  flask_web:
+    image: flask-docker
+    working_dir: /photomath
+    ports:
+      - "5001:5001"
